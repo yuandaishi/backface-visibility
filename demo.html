@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list{
+				width: 200px;
+				height: 200px;
+				margin: 50px auto;
+				border-radius: 50%;
+				overflow: hidden;
+				position: relative;
+			}
+			.span_list{
+				position: absolute;
+			}
+			.bottom{
+				width: 200px;
+				height: 200px;
+				background: url(1.jpg) no-repeat center center;
+				background-size: 200px;
+				z-index: 9;
+			}
+			.middle{
+				box-sizing: border-box;
+				width: 150px;
+				height: 150px;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto auto;
+				z-index: 999;
+				background: #ffffff;
+				border-radius: 50%;
+				transition: all .5s ease-in-out;
+				box-shadow: 0 0 0 25px rgba(255,255,255,.2);
+			}
+			.list:hover .middle{
+				box-shadow: 0 0 0 0 rgba(255,255,255,.2);
+			}
+			.top{
+				width: 150px;
+				height: 150px;
+				z-index: 999;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto auto;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+			.pic{
+				width: 150px;
+				height: 150px;
+				z-index: 998;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto auto;
+				background: url(1.jpg) no-repeat center center;
+				background-size: 200px;
+				border-radius: 50%;
+				transition: all .5s ease-in-out;
+				backface-visibility: hidden;
+			}
+			.list:hover .pic{
+				transform: rotateY(180deg);
+			}
+			.text{
+				width: 150px;
+				height: 150px;
+				z-index: 990;
+				left: 0px;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto auto;
+				background: pink;
+				border-radius: 50%;
+				transform: rotateY(180deg);
+				transition: all .5s ease-in-out;
+			}
+			.span_list p{
+				text-align: center;
+			}
+			.span_list .name{
+				font-size: 25px;
+				padding-top: 25px ;
+			}
+			.span_list .age{
+				border-top: 1px solid #FFFFFF;
+				margin: 20px 10px 0;
+				padding-top: 5px;
+			}
+			.span_list .constellation{
+				padding-top: 5px;
+			}
+			.list:hover .text{
+				transform: rotateY(360deg);
+			}
+			.white{
+				width: 150px;
+				height: 150px;
+				z-index: 995;
+				left: 0px;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto auto;
+				background: #FFFFFF;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="list">
+			<span class="bottom span_list"></span>
+			<span class="middle span_list"></span>
+			<span class="top span_list">
+				<span class="pic span_list"></span>
+				<span class="text span_list">
+					<p class="name">刘诗诗</p>
+					<p class="age">1987-03-10</p>
+					<p class="constellation">双鱼座</p>
+				</span>
+			</span>
+		</div>
+	</body>
+</html>
